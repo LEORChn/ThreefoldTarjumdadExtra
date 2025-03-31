@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!---- <meta name="referrer" content="no-referrer"> <!---->
+	<!---- <meta name="referrer" content="same-origin" version="61"> <!---->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>三相奇谈模拟版</title>
+	<script src="/js/stats.js" async></script>
+<style>
+html, body{ /**
+	margin: 0;
+	padding: 0; /**/
+	/** height: 100%; /**/
+}
+*{
+	image-rendering: pixelated;
+	image-rendering: optimizeSpeed;
+}
+a:not(:hover){ text-decoration: none; }
+.err{ color: red; }
+[id^="hide_"]{ display: none; }
+[flex]{ display: flex; } [flex=column]{ flex-direction: column; } [flex1]{ flex: 1; }
+[rtl], .rtl{ text-align: right; }
+@media screen and (orientation: portrait){ /* 竖屏 */ }
+@media screen and (orientation: landscape){ /* 横屏 */ }
+#ui_taskbg, #ui_taskbg *{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+body{
+	background: url(todolater.png) no-repeat;
+	background-size: cover;
+}
+body{
+	/*background: url(todonext.jpg) no-repeat;*/
+}
+</style>
+</head>
+<body>
+<p>
+	<a href="/workshop/">&lt; 返回瑞兽谷</a>
+</p>
+<div id=ui_resolution style="position:fixed; left:0; top:0;"></div>
+<!--
+<div id=ui_taskbg style="background-image: url(ui_taskbk.png); position: fixed; top: 13vh; left: 0; right: 0; height: 35vh; opacity:.5">
+	<div style="
+    width: 100%;
+    height: 76%;
+    margin-top: 4.3vh;
+    background-image: url(ui_taskbk2.png);
+">
+		
+	</div>
+</div>-->
+
+<!--
+<div id=ui_taskbg style="
+position: fixed;
+top: 141px;
+left: 0;
+width: 1920px;
+height: 382px;
+background:
+	url(ui_task_got.png) no-repeat 1540px 28px / 91px 218px, /* 原图的80% */
+	url(ui_subtasktitleside.png) no-repeat 50% 75px / 611px 27px,
+	url(ui_subtaskbk2.png) no-repeat center / 1920px 290px,
+	url(ui_subtaskbk.png) no-repeat top left / cover;
+opacity: .5;
+	font-family: simsun;
+"><div
+	id=ui_task_type
+	style="
+	margin-top: 75px;
+	line-height: 27px;
+	font-size: 24px;
+	text-align: center;
+	"
+	>接下来要做的是</div><div
+	id=ui_task_desc
+	style="
+	margin-top: 95px;
+	font-size: 42px;
+	text-align: center;
+	"
+	>帮黄闷五拿药或者离开此处</div>
+</div>-->
+<div id=ui_taskbg style="
+position: fixed;
+top: 141px;
+left: 0;
+width: 1920px;
+height: 382px;
+background:
+	url(ui_task_got.png) no-repeat 1540px 28px / 91px 218px, /* 原图的80% */
+	url(ui_tasktitleside.png) no-repeat 50% 75px / 611px 27px,
+	url(ui_taskbk2.png) no-repeat center / 1920px 290px,
+	url(ui_taskbk.png) no-repeat top left / cover;
+opacity: .5;
+	font-family: simsun;
+"><div
+	id=ui_task_type
+	style="
+	margin-top: 75px;
+	line-height: 27px;
+	font-size: 24px;
+	text-align: center;
+	" 这事有空再办
+	>接下来要做的是</div><div
+	id=ui_task_desc
+	style="
+	margin-top: 95px;
+	font-size: 42px;
+	text-align: center;
+	"
+	>收集全部的应龙皇帝雕像</div>
+</div>
+<script>
+var aa = true;
+setInterval(function(e){
+	//ui_taskbg.style.opacity = (aa ^= true)? 0: 1;
+}, 200)
+</script>
+<!--
+<div id=ui_taskbg style="
+background-image: url(ui_taskbk.png);
+position: fixed;
+top: 141px;
+left: 0; right: 0;
+height: 382px;
+opacity:.5;
+">
+	<div style="
+    background-image: url(ui_taskbk2.png);
+    width: 1920px;
+    height: 290px;
+    margin-top: 46px;
+	text-align: center;
+	position: relative
+	">
+		<div style="
+		background-image: url(ui_tasktitleside.png);
+		width: 611px;
+		height: 27px;
+		margin: auto;
+		margin-top: 46px;
+		
+		">接下来要做的是</div>
+	</div>
+</div>-->
+
+</body>
+<script src="/js/base.js"></script>
+<script>
+onresize = onload = function(e){
+	ui_resolution.innerText = innerWidth + ' x ' + innerHeight;
+};
+function onHelperMain(){}
+</script>
+</html>
