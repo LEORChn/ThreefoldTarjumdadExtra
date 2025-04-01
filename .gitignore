@@ -1,0 +1,13 @@
+
+*.lnk
+*.rpyc
+*.rpymc
+*.rpyb
+*.save
+persistent
+
+*.bak
+*.aac
+
+renpy/**
+
